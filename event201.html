@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Event 201</title>
+	<style rel="stylesheet">
+		body {
+			width: 50%;
+			margin: 5em auto;
+			text-align: center;
+		}
+		dt {
+			padding: 5px;
+			font-size: 23px;
+			background: rgba(0,0,0, 0.1);
+			border-top: 1px solid white;
+			border-bottom: 1px solid #c7c7c7;
+		}
+		dd {
+			margin:0;
+			padding: 0;
+		}
+	</style>
+</head>
+<body>
+	<dl>
+		<dt>What are your hours?</dt>
+		<dd>We are open 24/7.</dd>
+		<dt>What are your hours?</dt>
+		<dd>We are open 24/7.</dd>
+		<dt>What are your hours?</dt>
+		<dd>We are open 24/7.</dd>
+		<dt>What are your hours?</dt>
+		<dd>We are open 24/7.</dd>
+	</dl>
+<script src="../script/jquery-1.10.0.min.js"></script>
+<script>
+	$(document).ready(function(){
+		$('dd').filter(':nth-child(n+4)').hide();
+		$('dt').on('mouseenter', function(){	
+			$(this).next().slideDown(200);
+			$(this).next().siblings('dd').slideUp(500);
+		});
+	});
+</script>
+</body>
+</html>

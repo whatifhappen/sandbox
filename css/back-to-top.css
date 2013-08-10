@@ -1,0 +1,63 @@
+/*
+***********************
+** Mixins
+*************************
+*/
+/*
+***********************
+** Layout
+*************************
+*/
+article {
+  width: 70%;
+  margin: 50px auto;
+  padding: 1em;
+  -webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+  -o-box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+  border: 1px solid #bbb;
+}
+article p {
+  margin-bottom: 2em;
+}
+#backTop {
+  position: fixed;
+  bottom: 30px;
+  right: 20px;
+}
+#backTop a {
+  width: 75px;
+  display: block;
+  text-align: center;
+  font: 11px/100% Arial, Helvetica, sans-serif;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #bbb;
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  -ms-transition: all 0.5s;
+  transition: all 0.5s;
+}
+#backTop a:hover {
+  color: #000;
+}
+#backTop a span {
+  width: 75px;
+  height: 75px;
+  display: block;
+  margin-bottom: 7px;
+  background: #dddddd url(../img/up-arrow.png) no-repeat center center;
+  border-radius: 15px;
+  -webkit-border-radius: 15px;
+  -moz-border-radius: 15px;
+  -webkit-transition: background-color 1s;
+  -moz-transition: background-color 1s;
+  -o-transition: background-color 1s;
+  -ms-transition: background-color 1s;
+  transition: background-color 1s;
+}
+#backTop a:hover span {
+  background-color: #777;
+}

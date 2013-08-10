@@ -1,0 +1,80 @@
+/*
+***********************
+** Mixins
+*************************
+*/
+.transition (@prop: all, @duration: .5s) {
+	-webkit-transition: @prop @duration;
+	-moz-transition: @prop @duration;
+	-o-transition: @prop @duration;
+	-ms-transition: @prop @duration;
+	transition: @prop @duration;
+}
+
+.round (@radius: 15px) {
+	border-radius: @radius;
+	-webkit-border-radius: @radius;
+	-moz-border-radius: @radius;
+}
+
+.box (@x:0, @y:0, @blur: 5px, @alpha: .3){
+	-webkit-box-shadow: @x @y @blur rgba(0,0,0, @alpha);
+	-moz-box-shadow: @x @y @blur rgba(0,0,0, @alpha);
+	-o-box-shadow: @x @y @blur rgba(0,0,0, @alpha);
+	box-shadow: @x @y @blur rgba(0,0,0, @alpha);
+	border: 1px solid #bbb;
+}
+
+/*
+***********************
+** Layout
+*************************
+*/
+article {
+	width: 70%;
+	margin: 50px auto;
+	padding: 1em;
+	.box;
+
+	p {
+		margin-bottom: 2em;
+	}
+}
+
+#backTop {
+	position: fixed;
+	bottom: 30px;
+	right: 20px;
+
+	a {
+		width: 75px;
+		display: block;
+		text-align: center;
+		font: 11px/100% Arial, Helvetica, sans-serif;
+		text-transform: uppercase;
+		text-decoration: none;
+		color: #bbb;
+
+		.transition;
+
+		&:hover {
+			color: #000;
+		}
+
+		span {
+			width: 75px;
+			height: 75px;
+			display: block;
+			margin-bottom: 7px;
+			background: #ddd url(../img/up-arrow.png) no-repeat center center;
+
+			.round;
+			.transition(background-color, 1s);
+		}
+
+		&:hover span {
+			background-color: #777;
+		}
+	}
+
+}

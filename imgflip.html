@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>img in jQuery</title>
+	<link rel="stylesheet" href="css/imgFlip.css">
+</head>
+<body>
+<div class="wrapper">
+	<div class="slider">
+		<ul>
+			<li class="item"><img src="img/images.jpg" alt="code"></li>
+			<li class="item"><img src="img/Web_2.0_Map.svg.png" alt="code"></li>
+			<li class="item"><img src="img/web-development.png" alt="code"></li>
+			<li class="item"><img src="img/web-development-business.jpeg" alt="code"></li>
+		</ul>
+	</div>
+
+	<div id="slider-nav">
+		<button data-dir="prev">Previous</button>
+		<button data-dir="next">Next</button>
+	</div>
+</div>
+
+
+<script src="script/jquery-1.10.0.min.js"></script>
+<script src="script/slider.js"></script>
+<script>
+	$(document).ready(function(){
+		var container = $('div.slider').css('overflow', 'hidden').children('ul'),
+			slider = new Slider(container, $('#slider-nav'));
+
+		slider.nav.find('button').on('click', function(){
+			slider.direction( $(this).data('dir') );
+			slider.transition();
+		});
+	});
+</script>
+
+</body>
+</html>
